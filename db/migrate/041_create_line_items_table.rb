@@ -5,11 +5,11 @@ class CreateLineItemsTable < ActiveRecord::Migration
     # remove_column :line_items,:price
     #    remove_column :line_items,:order_id
     #    remove_column :line_items,:meal_id
-    # add_column :line_items, :options, :string
-    # add_column :line_items, :quantity, :integer
-    # add_column :line_items, :price, :float
-    # add_column :line_items, :name, :string    
-    # add_column :line_items, :order_id, :integer
+    add_column :line_items, :options, :string
+    add_column :line_items, :quantity, :integer
+    add_column :line_items, :price, :float
+    add_column :line_items, :name, :string    
+    add_column :line_items, :order_id, :integer
   end
 
   def self.down

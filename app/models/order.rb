@@ -56,16 +56,16 @@ class Order < ActiveRecord::Base
     ##if time_now+24.hours > delivery_datetime
      #if delivery_date <= Date.today #&& delivery_hour.hour <= hour_now
     if delivery_datetime < Time.now+24.hours
-      msg += "THE ORDER NEEDS TO BE MADE AT LEAST 24 HOURS PRIOR TO THE GAME"
+      msg += "THE ORDER NEEDS TO BE MADE AT LEAST 24 HOURS PRIOR TO THE GAME <br>"
     end
     if menu_id = 1
       if number_of_orders.length >= 3
-        msg += "PLEASE CHOOSE A DIFFERENT DELIVERY TIME"
+        msg += "PLEASE CHOOSE A DIFFERENT DELIVERY TIME <br>"
        end
     end
     if menu_id = 2
       if number_of_orders.length >= 2
-        msg += "PLEASE CHOOSE A DIFFERENT DELIVERY TIME"
+        msg += "PLEASE CHOOSE A DIFFERENT DELIVERY TIME<br>"
        end
     end
       msg
