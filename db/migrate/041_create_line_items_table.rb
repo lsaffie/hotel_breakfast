@@ -1,6 +1,6 @@
 class CreateLineItemsTable < ActiveRecord::Migration
   def self.up
-    remove_column :line_items, :meal_name
+    #remove_column :line_items, :meal_name
     remove_column :line_items,:quantity
     remove_column :line_items,:price
     remove_column :line_items,:order_id
