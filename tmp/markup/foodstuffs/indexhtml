@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>AttractionOrders: </title>
+  
+<link href="/stylesheets/styles.css?1214445530" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="outer">
+
+<div id="bg">
+  <div id="top" align="center"></div>
+  <div id="toptitle">FIELD VIEW </div>
+ 
+  <div id="body"> 
+<div id="content">   
+  <h1>Listing foodstuffs</h1>
+
+<table>
+
+  <tr>
+    <td>Bacon</td>
+    <td><a href="/foodstuffs/1094">Show</a></td>
+    <td><a href="/foodstuffs/1094/edit">Edit</a></td>
+    <td><a href="/foodstuffs/1094" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Destroy</a></td>
+  </tr>
+
+</table>
+
+<p>
+<a href="/foodstuffs/new">New foodstuffs</a>
+</p>
+</div>
+
+  </div>
+  </div>
+  </div>
+
+  </body>
+  </html>

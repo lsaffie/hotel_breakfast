@@ -1,0 +1,99 @@
+o:Net::HTTPOK:
+@readT:@socket0:@message"OK:
+@body"ˆ<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FIXME: text/xsl is not a registered media type
+-->
+<?xml-stylesheet type="text/xsl" href="xml-results.xsl"?>
+
+<!--
+  This interface is highly experimental and the output *will* change
+  (probably even several times) before finished. Do *not* rely on it!
+  See http://validator.w3.org/docs/users.html#api-warning
+-->
+
+<!DOCTYPE result [
+  <!ELEMENT result (meta, warnings?, messages?)>
+  <!ATTLIST result
+    version CDATA #FIXED '0.9.1'
+  >
+
+  <!ELEMENT meta (uri, modified, server, size, encoding, doctype, errors)>
+  <!ELEMENT uri      (#PCDATA)>
+  <!ELEMENT modified (#PCDATA)>
+  <!ELEMENT server   (#PCDATA)>
+  <!ELEMENT size     (#PCDATA)>
+  <!ELEMENT encoding (#PCDATA)>
+  <!ELEMENT doctype  (#PCDATA)>
+  <!ELEMENT errors   (#PCDATA)>
+
+  <!ELEMENT warnings (warning)+>
+  <!ELEMENT warning  (#PCDATA)>
+
+  <!ELEMENT messages (msg)*>
+  <!ELEMENT msg      (#PCDATA)>
+  <!ATTLIST msg
+    line   CDATA #IMPLIED
+    col    CDATA #IMPLIED
+    offset CDATA #IMPLIED
+  >
+]>
+
+<result>
+  <meta>
+    <uri>upload://Form Submission</uri>
+    <modified></modified>
+    <server></server>
+    <size></size>
+    <encoding>utf-8</encoding>
+    <doctype>-//W3C//DTD HTML 4.01//EN</doctype>
+    <errors>1</errors>
+  </meta>
+
+  <warnings>
+    
+  </warnings>
+
+  <messages>
+
+    <msg line="20"
+         col="129"
+    >NET-enabling start-tag requires SHORTTAG YES</msg>
+
+    <msg line="25"
+         col="146"
+    >NET-enabling start-tag requires SHORTTAG YES</msg>
+
+    <msg line="26"
+         col="152"
+    >NET-enabling start-tag requires SHORTTAG YES</msg>
+
+    <msg line="27"
+         col="174"
+    >NET-enabling start-tag requires SHORTTAG YES</msg>
+
+    <msg line="28"
+         col="137"
+    >NET-enabling start-tag requires SHORTTAG YES</msg>
+
+    <msg line="29"
+         col="132"
+    >NET-enabling start-tag requires SHORTTAG YES</msg>
+
+    <msg line="32"
+         col="81"
+    >NET-enabling start-tag requires SHORTTAG YES</msg>
+
+    <msg line="37"
+         col="6"
+    >end tag for &quot;DIV&quot; omitted, but its declaration does not permit this</msg>
+
+    <msg line="18"
+         col="0"
+    >start tag was here</msg>
+
+  </messages>
+
+</result>
+:@http_version"1.1:@body_existT:@header{"x-w3c-validator-errors["1"x-w3c-validator-status["Invalid"x-w3c-validator-recursion["1"content-type["#application/xml; charset=UTF-8"	date[""Tue, 17 Jun 2008 21:34:25 GMT"server["Apache/2.2.6 (Debian)"transfer-encoding["chunked:
+@code"200

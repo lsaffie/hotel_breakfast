@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>AttractionOrders: </title>
+  
+<link href="/stylesheets/styles.css?1214445530" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="outer">
+
+<div id="bg">
+  <div id="top" align="center"></div>
+  <div id="toptitle">FIELD VIEW </div>
+ 
+  <div id="body"> 
+<div id="content">   
+  <h1>New menu item</h1>
+
+
+<form action="/menus/1038/menu_items" enctype="multipart/form-data" method="post">
+  <p>
+	<input id="menu_item_uploaded_data" name="menu_item[uploaded_data]" size="30" type="file" />
+	<br />
+   <input id="menu_item_name" name="menu_item[name]" size="30" type="text" value="Breakfast" />
+    <br />
+   <input id="menu_item_price" name="menu_item[price]" size="30" type="text" value="2.5" />
+    <br />
+   <textarea cols="40" id="menu_item_description" name="menu_item[description]" rows="20">description</textarea>
+    <br />
+   </p>
+    <h3>Addable foodstuffs</h3>
+      <ul>
+
+          <li>
+            Eggs
+          </li>
+
+      </ul>
+  <p>
+    <input id="menu_item_submit" name="commit" type="submit" value="Update" />
+  </p>
+</form>
+
+<p>
+<a href="/menus/1038/menu_items">Back</a>
+</p>
+
+</div>
+
+  </div>
+  </div>
+  </div>
+
+  </body>
+  </html>

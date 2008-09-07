@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>AttractionOrders: </title>
+  
+<link href="/stylesheets/styles.css?1214445530" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="outer">
+
+<div id="bg">
+  <div id="top" align="center"></div>
+  <div id="toptitle">FIELD VIEW </div>
+ 
+  <div id="body"> 
+<div id="content">   
+  <div id="yellow_bg">
+  <p><div id="contentyellow">
+  <p> If you to order from this menu for your game please send this form<br>
+  at least 24 HOURS before the game starts. </p>
+  <div id="titlegen"></div>
+<div id="order_info">
+
+<p style="color: green"></p>
+
+</div></div></div>
+
+<div id="content">
+
+
+
+
+
+<h1>
+  
+</h1>
+
+<form action="/cart" method="post"><div style="margin:0;padding:0"><input name="_method" type="hidden" value="put" /></div>
+
+  <input id="menu_item_id" name="menu_item[id]" type="hidden" value="1114" />
+  <h1>
+    Breakfast
+  </h1>
+
+  <p>
+    <p>description</p>
+    <br />
+    $2.50
+  </p>
+  <ul>
+
+
+      <li>
+        Eggs
+
+          <ul>
+
+              <li>
+                
+                Over Easy
+                  <select id="option_1112_quantity_allowed" name="option[1112][quantity_allowed]"><option value="0">0</option>
+<option value="1">1</option>
+<option value="2" selected="selected">2</option>
+<option value="3">3</option>
+<option value="4">4</option></select>
+                  
+              </li>
+
+          </ul>
+      </li>
+
+
+  </ul>
+  <p>
+  <a href="/menu_views" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'get'); f.appendChild(m);f.submit();return false;"><img alt="Back" src="/images/BACK.gif?1214445591" /></a>
+   <a href="/cart" onclick="if (confirm('Are you sure')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;"><img alt="Reset" src="/images/reset.gif?1212762629" /></a>
+   <input src="/images/ADDTOCART.gif?1214445585" type="image" />
+  </p>
+</form>
+
+
+
+
+
+</div>
+
+  </div>
+  </div>
+  </div>
+
+  </body>
+  </html>

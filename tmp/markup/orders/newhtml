@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>My title</title>
+</head>
+<body>
+<div id="yellow_bg">
+  <p><div id="contentyellow">
+  <p> If you wish to have breakfast delivered to your room tomorrow morninig,<BR>
+  please send this form BEFORE 2:00 A.M. </p>
+  <div id="titlegen"></div>
+<div id="order_info">
+
+<p style="color: green"></p>
+</div></div></div>
+
+<div id="content">
+<form action="/orders" method="post">
+
+<div class="checkout_right">
+  <span class="title">GUEST INFORMATION</span>
+  <p>Please fill out all the required fields (*)</p>
+  <div class="checkout_name">* Guest Name </div><input id="customized_menus_guest_name" name="customized_menus[guest_name]" size="20" type="text" />
+  <div class="checkout_name">* Arrival Date </div><input id="customized_menus_arrival_date" name="customized_menus[arrival_date]" size="20" type="text" />
+  <div class="checkout_name">* Confirmation Number </div> <input id="customized_menus_confirmation_number" name="customized_menus[confirmation_number]" size="20" type="text" />
+  <div class="checkout_name">* Tel </div><input id="customized_menus_telephone" name="customized_menus[telephone]" size="20" type="text" />
+  <div class="checkout_name">* E-mail </div><input id="customized_menus_email" name="customized_menus[email]" size="20" type="text" />
+</div>
+<div>  
+  <input id="customized_menus_submit" name="commit" type="submit" value="Submit" />
+</div>
+</form>
+  
+
+</body>
+</html>

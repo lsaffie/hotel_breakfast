@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>AttractionOrders: </title>
+  
+<link href="/stylesheets/styles.css?1214445530" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+
+
+</head>
+
+<body>
+
+<div id="outer">
+
+<div id="bg">
+  <div id="top" align="center"></div>
+  <div id="toptitle">FIELD VIEW </div>
+ 
+  <div id="body"> 
+<div id="content">   
+  <h1>Editing menu</h1>
+
+
+
+<form action="/menus/1024" class="edit_menu" id="edit_menu_1024" method="post"><div style="margin:0;padding:0"><input name="_method" type="hidden" value="put" /></div>
+  <p>
+    <input id="menu_name" name="menu[name]" size="30" type="text" value="#&lt;Spec::Mocks::Mock:0x2048e5c&gt;" />
+    <input id="menu_submit" name="commit" type="submit" value="Update" />
+  </p>
+</form>
+
+<p>
+<a href="/menus/1024">Show</a> |
+<a href="/menus">Back</a>
+</p>
+</div>
+
+  </div>
+  </div>
+  </div>
+
+  </body>
+  </html>
