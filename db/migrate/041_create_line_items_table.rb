@@ -9,7 +9,7 @@ class CreateLineItemsTable < ActiveRecord::Migration
     # add_column :line_items, :quantity, :integer
     # add_column :line_items, :price, :float
     # add_column :line_items, :name, :string    
-    add_column :line_items, :order_id, :integer
+    # add_column :line_items, :order_id, :integer
   end
 
   def self.down
