@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(:version => 60) do
     t.float    "total_price",                        :default => 0.0
     t.string   "updated_by"
     t.string   "delivery_time"
+    t.datetime "updated_on"
     t.date     "delivery_date"
     t.datetime "delivery_datetime"
   end

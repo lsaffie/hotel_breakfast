@@ -38,19 +38,19 @@
 <!--<div class="checkout_name"> </div><%#= form.datetime_select :delivery_datetime, :minute_step => 15%>-->
 
  <div class="delivery_times1">
-<% if @menu_id == 1 %>
-  <% for dt in @delivery_times1 %>
-    <%= form.radio_button :delivery_time, dt %>
-    <%= dt %><br>
-  <% end %>
-  </div>
-  <div class="delivery_times2">
-  <% for dt in @delivery_times2 %>
-    <%= form.radio_button :delivery_time, dt %>
-    <%= dt %><br>
-  <% end %>
-<% end %>
-<% if @menu_id == 2 %>
+<%# if @menu_id == 1 %>
+  <%# for dt in @delivery_times1 %>
+    <%#= form.radio_button :delivery_time, dt %>
+   <!-- <%#= dt %><br>-->
+  <%# end %>
+ <!-- </div>-->
+  <!--<div class="delivery_times2">-->
+  <%# for dt in @delivery_times2 %>
+    <%#= form.radio_button :delivery_time, dt %>
+  <!--  <%#= dt %><br>-->
+  <%# end %>
+<%# end %>
+<%# if @menu_id == 2 %>
   <% for dt in @delivery_times1bf %>
     <%= form.radio_button :delivery_time, dt %>
     <%= dt %><br>
@@ -61,24 +61,24 @@
     <%= form.radio_button :delivery_time, dt %>
     <%= dt %><br>
   <% end %>
-<% end %>
+<%# end %>
 </div>
 <% if @menu_id == 2 || @menu_id == 1 %>
   <div class="checkout_right">
     <span class="title">GUEST INFORMATION</span>
     <p>Please fill out all the required fields (*)</p>
     
-  <% if @menu_id == 1 %>  
-    <div class="checkout_name">* Registered Guest Name </div><%= form.text_field :guest_name, :size => 20 %>
-    <div class="checkout_name">* Arrival Date </div><%= form.date_select :arrival_date, :size => 20 %>
-    <div class="checkout_name">* Confirmation Number </div> <%= form.text_field :confirmation_number, :size => 20 %>
-    <div class="checkout_name">* Tel (xxx-xxx-xxxx)</div><%= form.text_field :telephone, :size => 20 %>
-    <div class="checkout_name">* E-mail </div><%= form.text_field :email, :size => 20 %>
-    <div class="checkout_name">* E-mail Confirmation </div><%= form.text_field :email_confirmation, :size => 20 %>
-  <% elsif @menu_id == 2 %>
+  <%# if @menu_id == 1 %>  
+    <!--<div class="checkout_name">* Registered Guest Name </div><%= form.text_field :guest_name, :size => 20 %>-->
+   <!-- <div class="checkout_name">* Arrival Date </div><%= form.date_select :arrival_date, :size => 20 %>-->
+    <!--<div class="checkout_name">* Confirmation Number </div> <%= form.text_field :confirmation_number, :size => 20 %>-->
+   <!-- <div class="checkout_name">* Tel (xxx-xxx-xxxx)</div><%= form.text_field :telephone, :size => 20 %>-->
+   <!-- <div class="checkout_name">* E-mail </div><%#= form.text_field :email, :size => 20 %>-->
+   <!-- <div class="checkout_name">* E-mail Confirmation </div><%#= form.text_field :email_confirmation, :size => 20 %>-->
+  <%# elsif @menu_id == 2 %>
    <div class="checkout_name">* Registered Guest Name </div><%= form.text_field :guest_name, :size => 20 %>
    <div class="checkout_name">* Room Number </div><%= form.text_field :room_number, :size => 20 %>
- <% end %>
+ <%# end %>
   </div>
 <% end %>
 

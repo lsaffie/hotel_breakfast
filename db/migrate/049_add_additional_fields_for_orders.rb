@@ -6,6 +6,6 @@ class AddAdditionalFieldsForOrders < ActiveRecord::Migration
 
     def self.down
       remove_column :orders, :updated_on
-      change_column :orders, :order_status
+      #change_column :orders, :order_status
     end
   end

@@ -2,7 +2,7 @@
 #   gem install sqlite3-ruby
 development:
   adapter: sqlite3
-  database: db/developmenthotel.sqlite3
+  database: db/developmentbf.sqlite3
   timeout: 5000
 #development:
      #adapter: mysql
