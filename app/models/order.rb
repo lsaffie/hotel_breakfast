@@ -10,10 +10,10 @@ class Order < ActiveRecord::Base
     #  validates_length_of :telephone, :is=>10, :message => "MUST CONSIST OF 10 DIGITS!"
     #   
     #  validates_presence_of :guest_name, :arrival_date, :confirmation_number, :delivery_time
-    #  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+      validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
     #  #validates_numericality_of :confirmation_number
     #  validates_length_of :confirmation_number, :is => 8, :message => "CONFIRMATION NUMBER MUST BE 8 CHARACTERS"
-    #  validates_confirmation_of :email, :message => "EMAIL ADDRESSES MUST MATCH"
+      validates_confirmation_of :email, :message => "EMAIL ADDRESSES MUST MATCH"
    
   validates_presence_of :guest_name, :room_number, :delivery_time
   

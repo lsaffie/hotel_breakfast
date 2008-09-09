@@ -2,7 +2,7 @@
   <p><div id="contentyellow">
   <% if @menu_id == 1 || @menu_id == 2 %>
     <p> If you wish to have breakfast delivered to your room tomorrow morninig,<BR>
-    please send this form 24 hours prior to the game </p>
+    please send this form a day ahead. Cut off time is 2:00AM </p>
   <% end %>
   <div id="titlegen"></div>
 <div id="order_info">
@@ -78,6 +78,9 @@
   <%# elsif @menu_id == 2 %>
    <div class="checkout_name">* Registered Guest Name </div><%= form.text_field :guest_name, :size => 20 %>
    <div class="checkout_name">* Room Number </div><%= form.text_field :room_number, :size => 20 %>
+   <div class="checkout_name">* E-mail </div><%= form.text_field :email, :size => 20 %>
+   <div class="checkout_name">* E-mail Confirmation </div><%= form.text_field :email_confirmation, :size => 20 %>
+
  <%# end %>
   </div>
 <% end %>
