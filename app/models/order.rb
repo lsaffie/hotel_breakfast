@@ -51,8 +51,7 @@ class Order < ActiveRecord::Base
     delivery_datetime = Time.parse delivery_date.to_s + "-"+delivery_time
     delivery_time = order.delivery_time
     number_of_orders = Order.find(:all, :conditions => ["delivery_date = ? and delivery_time = ?", delivery_date, delivery_time])
-    require 'ruby-debug'
-    debugger
+
     #number_of_orders.length
     msg = ""
     ##if time_now+24.hours > delivery_datetime
