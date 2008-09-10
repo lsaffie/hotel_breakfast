@@ -72,7 +72,7 @@ class Order < ActiveRecord::Base
     # end
     if delivery_date <= Time.now.to_date
       msg += "DELIVERY DATE CAN'T BE IN THE PAST OR TODAY<br>"
-    elsif time_now.to_s(:time) > "2:00"
+    elsif time_now.to_s(:time) > "02:00"
       msg += "THE ORDER NEEDS TO BE MADE BEFORE 2:00AM<br>"
     elsif number_of_orders.length >= 2
       msg += "PLEASE CHOOSE A DIFFERENT DELIVERY TIME<br>"
