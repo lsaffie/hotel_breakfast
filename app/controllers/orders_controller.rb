@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
   end
   
   def create
-    @menu_id = session[:cart].items[0].menu_item.menu_id
+    #@menu_id = session[:cart].items[0].menu_item.menu_id
     @delivery_times1=['12:00pm-12:15pm','12:15pm-12:30pm','12:45pm-1:00pm','1:00pm-1:15pm','1:15pm-1:30pm','1:45pm-2:00pm',
       '2:00pm-2:15pm','2:15pm-2:30pm','2:45pm-3:00pm','3:00pm-3:15pm','3:15pm-3:30pm','3:45pm-4:00pm',
       '4:00pm-4:15pm','4:15pm-4:30pm','4:45pm-5:00pm']
@@ -56,7 +56,8 @@ class OrdersController < ApplicationController
     @order = Order.new(params[:customized_menus])
     @order.add_line_items_from_cart(@cart)
     @order.total_price = @order.total
-    msg = @order.check_delivery_times(@order,@menu_id)
+#    msg = @order.check_delivery_times(@order,@menu_id)
+    msg = @order.check_delivery_times(@order)
     if msg == ''
       if @order.save
           Mailer.deliver_confirm_admin(@order,@cart)

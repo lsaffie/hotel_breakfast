@@ -41,7 +41,7 @@ class Order < ActiveRecord::Base
     line_items.map(&:price).compact.sum
   end
   
-  def check_delivery_times(order,menu_id)
+  def check_delivery_times(order)
     ending_char = order.delivery_time.index("-")
     delivery_time = order.delivery_time[0..ending_char]
     #delivery_hour = Time.parse delivery_time
@@ -51,24 +51,33 @@ class Order < ActiveRecord::Base
     delivery_datetime = Time.parse delivery_date.to_s + "-"+delivery_time
     delivery_time = order.delivery_time
     number_of_orders = Order.find(:all, :conditions => ["delivery_date = ? and delivery_time = ?", delivery_date, delivery_time])
+    require 'ruby-debug'
+    debugger
     #number_of_orders.length
     msg = ""
     ##if time_now+24.hours > delivery_datetime
      #if delivery_date <= Date.today #&& delivery_hour.hour <= hour_now
-    if delivery_datetime < Time.now+24.hours
-      msg += "THE ORDER NEEDS TO BE MADE AT LEAST 24 HOURS PRIOR TO THE GAME <br>"
+    # if delivery_datetime < Time.now+24.hours
+    #      msg += "THE ORDER NEEDS TO BE MADE AT LEAST 24 HOURS PRIOR TO THE GAME <br>"
+    #    end
+    # if menu_id = 1
+    #       if number_of_orders.length >= 3
+    #         msg += "PLEASE CHOOSE A DIFFERENT DELIVERY TIME <br>"
+    #        end
+    #     end
+    # if menu_id = 2
+    
+    # if delivery_datetime < Time.now+24.hours
+    #      msg += "THE ORDER NEEDS TO BE MADE AT LEAST 24 HOURS PRIOR TO THE GAME <br>"
+    # end
+    
+    if time_now.to_s(:time) > "2:00"
+      msg += "THE ORDER NEEDS TO BE MADE BEFORE 2:00AM"
     end
-    if menu_id = 1
-      if number_of_orders.length >= 3
-        msg += "PLEASE CHOOSE A DIFFERENT DELIVERY TIME <br>"
-       end
-    end
-    if menu_id = 2
-      if number_of_orders.length >= 2
-        msg += "PLEASE CHOOSE A DIFFERENT DELIVERY TIME<br>"
-       end
-    end
-      msg
+    if number_of_orders.length >= 2
+      msg += "PLEASE CHOOSE A DIFFERENT DELIVERY TIME<br>"
+     end
+    msg
   end
 end
 
