@@ -51,7 +51,8 @@ class Order < ActiveRecord::Base
     delivery_datetime = Time.parse delivery_date.to_s + "-"+delivery_time
     delivery_time = order.delivery_time
     number_of_orders = Order.find(:all, :conditions => ["delivery_date = ? and delivery_time = ?", delivery_date, delivery_time])
-
+require 'ruby-debug'
+debugger
 
     #number_of_orders.length
     msg = ""
@@ -70,14 +71,15 @@ class Order < ActiveRecord::Base
     # if delivery_datetime < Time.now+24.hours
     #      msg += "THE ORDER NEEDS TO BE MADE AT LEAST 24 HOURS PRIOR TO THE GAME <br>"
     # end
-    if delivery_date <= Time.now.to_date
-      msg += "DELIVERY DATE CAN'T BE IN THE PAST OR TODAY<br>"
-    elsif time_now.to_s(:time) > "02:00"
-      msg += "THE ORDER NEEDS TO BE MADE BEFORE 2:00AM<br>"
+    #if delivery_date < Time.now.to_date
+    if delivery_datetime < Time.now
+      msg += "DELIVERY DATE CAN'T BE IN THE PAST<br>"
+    elsif time_now.to_s(:time) > "02:00" && delivery_date == Time.now.to_date
+      msg += "THE ORDER NEEDS TO BE MADE BEFORE 2:00AM<br> CHOOSE A DIFFERENT DELIVERY DATE<BR>"
     elsif number_of_orders.length >= 2
       msg += "PLEASE CHOOSE A DIFFERENT DELIVERY TIME<br>"
     else
-      msg = ""
+      msg = nil
     end
     msg
   end

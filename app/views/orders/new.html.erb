@@ -25,7 +25,7 @@
     <b>Total: <%= number_to_currency(@cart.total_price) %></b>
   </ol>
 <% end %>
-<p style="color: green"><%= flash[:notice] %></p>
+<p style="color: red"><%= flash[:notice] %></p>
 <%= error_messages_for 'order' %>
 </div></div></div>
 

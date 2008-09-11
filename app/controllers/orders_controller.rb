@@ -58,7 +58,8 @@ class OrdersController < ApplicationController
     @order.total_price = @order.total
 #    msg = @order.check_delivery_times(@order,@menu_id)
     msg = @order.check_delivery_times(@order)
-    if msg == ''
+    if msg == nil
+      flash[:notice] = ""
       if @order.save
           Mailer.deliver_confirm_admin(@order,@cart)
           Mailer.deliver_confirm_guest(@order,@cart)
